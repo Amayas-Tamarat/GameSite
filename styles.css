@@ -1,0 +1,220 @@
+/* General Styles */
+
+:root {
+    --primary-color: #f9a826;
+    --secondary-color: #1e1e1e;
+    --background-color: #121212;
+    --text-color: #fff;
+    --muted-color: #aaa;
+    --card-bg-color: #333;
+    --transition-duration: 0.3s;
+    --border-radius: 10px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --hover-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #121212;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+/* Header */
+#main-header {
+    background: #1e1e1e;
+    padding: 20px 0;
+    border-bottom: 3px solid #444;
+}
+
+#main-header .logo {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: #f9a826;
+    display: inline-block;
+}
+
+#main-header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+#main-header nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#main-header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Hero Section */
+#hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    height: 60vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+#hero .btn {
+    background: #f9a826;
+    color: #121212;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 10px;
+}
+
+#hero .btn.secondary {
+    background: #fff;
+    color: #121212;
+}
+
+/* Info Sections */
+.info-section {
+    padding: 40px 0;
+    background: #222;
+}
+
+.info-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.features-list, .game-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.feature, .game {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.feature h3, .game h3 {
+    margin-bottom: 10px;
+}
+
+.feature p, .game p {
+    font-size: 0.9rem;
+}
+
+/* Footer */
+#main-footer {
+    background: #1e1e1e;
+    padding: 10px 0;
+    text-align: center;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .features-list, .game-gallery {
+        flex-direction: column;
+    }
+
+    #hero h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .feature, .game {
+        width: 100%;
+    }
+}
+
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f9a826;
+    color: #121212;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+
+
+.game {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.game:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5); /* Enhance shadow */
+}
+
+.game img {
+    width: 100%; /* Keep the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Match card's rounded corners */
+    object-fit: cover; /* Ensure the image covers its container properly */
+}
+
+.link-button {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits color from the parent element */
+    font-weight: bold; /* Optional: Makes it look less like a link */
+    cursor: pointer; /* Keeps the pointer interaction */
+    transition: color var(--transition-duration);
+}
+
+.link-button:hover {
+    color: var(--primary-color); /* Add hover effect if needed */
+}
+
+
+
